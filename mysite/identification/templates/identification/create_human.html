@@ -1,0 +1,42 @@
+<style>
+    form {
+        background-color: #f8f9fa;
+        padding: 20px;
+        margin: 20px;
+    }
+    input, select {
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    label {
+        color: #333333;
+    }
+    input:focus, select:focus {
+        border-color: #3C8DBC;
+        box-shadow: 0 0 0 0.2rem rgba(60, 141, 188, 0.25);
+    }
+    input[type="submit"] {
+        background-color: #3C8DBC;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #3C8DBC;
+        color: #fff;
+    }
+</style>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form.as_p }}
+    </div>
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>

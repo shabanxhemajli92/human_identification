@@ -1,0 +1,25 @@
+{% extends 'identification/base.html' %}
+
+{% block content %}
+    {% if human %}
+        <h1>{{ human.full_name }}</h1>
+        <p>Date of Birth: {{ human.dob }}</p>
+        <p>Address: {{ human.address }}</p>
+        <p>Nationality: {{ human.nationality }}</p>
+        <p>Residency: {{ human.residency }}</p>
+        <p>Bank Account: {{ human.bank_account }}</p>
+        <p>Payment Methods: {{ human.payment_methods }}</p>
+        <p>Cell Phone Provider: {{ human.cell_phone_provider }}</p>
+        <p>Car: {{ human.car }}</p>
+        <p>Registration Plate: {{ human.registration_plate }}</p>
+        <p>Criminal Record: {{ human.criminal_record }}</p>
+        <p>Picture: <img src="{{ human.picture.url }}"></p>
+    {% else %}
+        <h1>All Humans</h1>
+        <ul>
+            {% for human in humans %}
+                <li>{{ human.full_name }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

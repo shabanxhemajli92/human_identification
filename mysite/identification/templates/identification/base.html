@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>identification</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+        #content {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+        footer {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+    <footer>Copyright © Shaban Xhemajli</footer>
+</body>
+</html>
